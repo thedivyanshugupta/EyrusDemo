@@ -16,32 +16,32 @@ struct UserInfoView: View {
     @State private var newRefreshToken = ""
 
     var body: some View {
-        Button {
+        VStack {
+            Button {
+                getUserInfo()
+            } label: {
+                Text("Get User Info")
+            }
+            .padding()
+            Button {
+                refreshToken()
+            } label: {
+                Text("refresh")
+            }
+            .padding()
+            
+            Text(userFirstName)
+                .padding()
+            
+            Text(userLastName)
+                .padding()
 
-            getUserInfo()
-        
-        } label: {
-            Text("Get User Info")
+            Text(userCompanyName)
+                .padding()
+
+            Text(userTelephone)
+                .padding()
         }
-        .padding()
-        Button {
-            refreshToken()
-        } label: {
-            Text("refresh")
-        }
-        .padding()
-        
-        Text(userFirstName)
-            .padding()
-        
-        Text(userLastName)
-            .padding()
-
-        Text(userCompanyName)
-            .padding()
-
-        Text(userTelephone)
-            .padding()
     }
    
     func getUserInfo() {
