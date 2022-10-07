@@ -5,9 +5,7 @@
 //  Created by Roro on 9/26/22.
 //
 
-import Foundation
 import SwiftUI
-import Combine
 
 struct ServerMessage: Decodable {
     let loginStatus: Int    
